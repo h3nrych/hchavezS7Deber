@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hchavezS7Deber.Views.vEditarProd"
+             Title="vEditarProd">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Label Text="Editar Producto" FontSize="20" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"/>
+
+        <Label Text="Código" Grid.Row="1"/>
+        <Entry x:Name="txtCodigo" Placeholder="Ingrese el código" Keyboard="Numeric" Grid.Row="2" TextColor="#0077CC"/>
+
+        <Label Text="Nombre" Grid.Row="3"/>
+        <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" Keyboard="Default" Grid.Row="4"/>
+
+        <Label Text="Categoría" Grid.Row="5"/>
+        <Entry x:Name="txtCategoria" Placeholder="Ingrese la categoría" Keyboard="Default" Grid.Row="6"/>
+
+        <Label Text="Proveedor" Grid.Column="1" Grid.Row="1"/>
+        <Entry x:Name="txtProveedor" Placeholder="Ingrese el proveedor" Keyboard="Default" Grid.Column="1" Grid.Row="2"/>
+
+        <Label Text="Precio" Grid.Column="1" Grid.Row="3"/>
+        <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio" Keyboard="Numeric" Grid.Column="1" Grid.Row="4"/>
+
+        <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.ColumnSpan="2" Grid.Row="7" HorizontalOptions="Center" BackgroundColor="Yellow" TextColor="Black"/>
+        <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" Grid.ColumnSpan="2" Grid.Row="8" HorizontalOptions="Center" BackgroundColor="Red" TextColor="Black"/>
+
+    </Grid>
+
+</ContentPage>

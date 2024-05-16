@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hchavezS7Deber.Views.vProducto"
+             Title="vProducto">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Label 
+    Text="Lista de productos"
+    FontSize="22"
+    HorizontalTextAlignment="Center"
+    FontFamily="Roboto"/>
+
+            <BoxView Grid.Row="1" HeightRequest="10" BackgroundColor="Transparent"/>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Text="Código"/>
+                <Label Grid.Column="1" Text="Nombre"/>
+                <Label Grid.Column="2" Text="Categoría"/>
+                <Label Grid.Column="3" Text="Proveedor"/>
+                <Label Grid.Column="4" Text="Precio"/>
+            </Grid>
+            <BoxView Grid.Row="1" HeightRequest="10" BackgroundColor="Transparent"/>
+
+
+            <Grid Margin="0,10,0,0">
+
+
+
+                <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected" Grid.Row="2">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BorderColor="LightGray" CornerRadius="1" HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" TextColor="#0077CC" />
+                                        <Label Text="{Binding nombre}" Grid.Row="0" Grid.Column="1"/>
+                                        <Label Text="{Binding categoria}" Grid.Row="0" Grid.Column="2"/>
+                                        <Label Text="{Binding proveedor}" Grid.Row="0" Grid.Column="3"/>
+                                        <Label Text="{Binding precio}" Grid.Row="0" Grid.Column="4"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+
+
+
+            <Label Text=""/>
+
+            <Button x:Name="btnAgregar"
+            Text="Agregar"
+            Clicked="btnAgregar_Clicked"
+             />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
